@@ -1,0 +1,167 @@
+@import "../../responsive.scss";
+nav {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    transition: all 0.5s ease;
+
+    @include md() {
+      font-size: 12px;
+    }
+
+    @include sm() {
+      display: none;
+    }
+    @include exsm() {
+      display: none;
+    }
+
+    &:hover {
+      scale: 1.05;
+    }
+  }
+
+  .left {
+    flex: 3;
+    gap: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      gap: 10px;
+      display: flex;
+      font-size: 20px;
+      font-weight: bold;
+      align-items: center;
+
+      img {
+        width: 90px;
+      }
+      span {
+        @include md() {
+          display: initial;
+        }
+
+        @include sm() {
+          display: initial;
+        }
+      }
+    }
+  }
+  .right {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    // background-color: #ffddfa;
+    justify-content: flex-end;
+    // gap: 30px;
+
+    @include md() {
+      background-color: transparent;
+    }
+
+    a {
+      padding: 12px 18px;
+      font-weight: bold;
+    }
+    .register {
+      transition: all 0.4s ease;
+      background-color: #fbe815;
+
+      &:hover {
+        color: #fbe815;
+        background-color: #000000;
+      }
+
+      @include md() {
+        display: inline;
+        width: 90px;
+      }
+      @include sm() {
+        display: none;
+      }
+
+      @include exsm() {
+        display: none;
+      }
+    }
+
+    .signin {
+      @include md() {
+        display: inline;
+        width: 90px;
+      }
+
+      @include sm() {
+        display: none;
+      }
+
+      @include exsm() {
+        display: none;
+      }
+    }
+
+    .menuIcon {
+      z-index: 2;
+      display: none;
+
+      img {
+        width: 40px;
+        height: 40px;
+        color: #fff;
+        cursor: pointer;
+      }
+      @include md() {
+        display: none;
+      }
+      @include sm() {
+        display: inline;
+        margin-right: 10px;
+      }
+      @include exsm() {
+        display: inline;
+        margin-right: 10px;
+      }
+    }
+    .menu {
+      top: 0%;
+      width: 45%;
+      right: -50%;
+      height: 100vh;
+      display: flex;
+      color: #fff;
+      font-size: 20px;
+      position: absolute;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      transition: all 1s ease;
+      background-color: #000000;
+      &.active {
+        right: 0%;
+      }
+
+      @include md() {
+        a {
+          display: initial;
+        }
+      }
+      @include sm() {
+        a {
+          display: initial;
+          font-size: 20px;
+        }
+      }
+      @include exsm() {
+        a {
+          display: initial;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
