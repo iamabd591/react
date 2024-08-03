@@ -1,7 +1,23 @@
-import "./NavBar.scss";
 import React, { useState } from "react";
-function NavBar() {
+import "./NavBar.scss";
+
+const NavBar = () => {
   const [open, setOpen] = useState(false);
+
+  const toggleMenu = () => setOpen(!open);
+
+  const navLinks = [
+    { href: "/", text: "Home" },
+    { href: "/", text: "About" },
+    { href: "/", text: "Contact" },
+    { href: "/", text: "Agents" },
+  ];
+
+  const authLinks = [
+    { href: "/", text: "Sign in", className: "signin" },
+    { href: "/", text: "Sign up", className: "register" },
+  ];
+
   return (
     <nav>
       <div className="left">
@@ -9,35 +25,31 @@ function NavBar() {
           <img src="/logo.png" alt="logo" />
           <span>RealEState</span>
         </a>
-        <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Contact</a>
-        <a href="/">Agents</a>
+        {navLinks.map((link, index) => (
+          <a key={index} href={link.href}>
+            {link.text}
+          </a>
+        ))}
       </div>
       <div className="right">
-        <a href="/" className="signin">
-          Sign in
-        </a>
-        <a href="/" className="register">
-          Sign up
-        </a>
-        <div className="menuIcon">
-          <img
-            src="/hamburger.png"
-            alt="hamburger"
-            onClick={() => setOpen(!open)}
-          />
+        {authLinks.map((link, index) => (
+          <a key={index} href={link.href} className={link.className}>
+            {link.text}
+          </a>
+        ))}
+        <div className="menuIcon" onClick={toggleMenu}>
+          <img src="/hamburger.png" alt="hamburger menu" />
         </div>
         <div className={open ? "menu active" : "menu"}>
-          <a href="/">Home</a>
-          <a href="/">About</a>
-          <a href="/">Contact</a>
-          <a href="/">Agents</a>
-          <a href="/">Sign In</a>
-          <a href="/">Sign Up</a>
+          {navLinks.concat(authLinks).map((link, index) => (
+            <a key={index} href={link.href}>
+              {link.text}
+            </a>
+          ))}
         </div>
       </div>
     </nav>
   );
-}
+};
+
 export default NavBar;

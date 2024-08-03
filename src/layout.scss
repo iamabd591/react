@@ -1,9 +1,11 @@
 @import "./responsive.scss";
 .layout {
   height: 100vh;
+  display: flex;
   max-width: 1300px;
-  margin-left: 0, auto, 0 auto;
+  flex-direction: column;
   padding: 0, 20px, 0, 20px;
+  margin-left: 0, auto, 0 auto;
 
   @include exlg() {
     max-width: 1100px;
@@ -23,5 +25,8 @@
 
   @include exsm() {
     max-width: 475px;
+  }
+  .content {
+    flex: 1;
   }
 }
