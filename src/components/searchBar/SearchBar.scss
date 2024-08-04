@@ -1,0 +1,120 @@
+@import "../../responsive.scss";
+
+.searchBar {
+  .type {
+    button {
+      margin-top: 5px;
+      cursor: pointer;
+      padding: 16px 36px;
+      border-bottom: none;
+      background-color: #fff;
+      transition: all 0.3s ease;
+      text-transform: capitalize;
+      border: 1px solid #b8b8b8;
+      &.active {
+        color: #ffffff;
+        background-color: #000000;
+      }
+      &:first-child {
+        border-right: none;
+        border-top-left-radius: 5px;
+      }
+      &:last-child {
+        border-left: none;
+        border-top-right-radius: 5px;
+      }
+    }
+  }
+  form {
+    gap: 5px;
+    display: flex;
+    height: 65px;
+    border: 1px solid #b8b8b8;
+    justify-content: space-between;
+
+    input {
+      outline: none;
+      border: none;
+      width: 200px;
+      padding: 0px 10px;
+
+      @include exlg() {
+        padding: 0px 2px;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 120px;
+        }
+      }
+      @include lg() {
+        padding: 0px 5px;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 140px;
+        }
+      }
+
+      @include md() {
+        padding: 0px 2px;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 100px;
+        }
+      }
+
+      @include sm() {
+        padding: 0px 2px;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 80px;
+          font-size: 12px;
+        }
+      }
+
+      @include exsm() {
+        padding: 0px 2px;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 60px;
+          font-size: 10px;
+        }
+      }
+    }
+    button {
+      flex: 1;
+      border: none;
+      cursor: pointer;
+      background-color: #fbe815;
+
+      @include md() {
+        flex: 0.4;
+      }
+
+      @include exsm() {
+        flex: 0.4;
+      }
+
+      @include sm() {
+        flex: 0.4;
+      }
+    }
+    img {
+      width: 24px;
+      height: 24px;
+
+      @include lg() {
+        width:20px;
+        height:20px;
+      }
+    }
+  }
+}

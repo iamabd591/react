@@ -1,6 +1,6 @@
 import "./layout.scss";
-import NavBar from "./components/NavBar/navBar";
 import HomePage from "./routes/HomePage/Home";
+import NavBar from "./components/NavBar/navBar";
 
 function App() {
   return (
