@@ -1,0 +1,59 @@
+@import "../../responsive.scss";
+
+.footerMain {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  background-color: #ffe520;
+  justify-content: space-between;
+
+  .footerInfo {
+    width: 33%;
+    height: 100%;
+    display: block;
+    padding: 40px 50px;
+    align-content: center;
+
+    .footerImage {
+      width: 100%;
+
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+    .footertext {
+      width: 100%;
+      height: 100%;
+
+      p {
+        text-align: justify;
+        font-size: 16px;
+      }
+    }
+  }
+  .footerlinks {
+    width: 33%;
+    height: 100%;
+    padding-top: 40px;
+    text-align: center;
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      a {
+        display: flex;
+        flex-direction: column;
+        height: 20px;
+        margin-top: 20px;
+        font-weight: 800;
+        transition: all 0.5s ease;
+
+        &:hover{
+            text-decoration: underline;
+        }
+      }
+    }
+  }
+}
