@@ -2,29 +2,29 @@
 .layout {
   height: 100vh;
   display: flex;
-  max-width: 1300px;
+  width: 1300px;
   flex-direction: column;
-  padding: 0, 20px, 0, 20px;
-  margin-left: 0, auto, 0 auto;
+  // padding: 0, 20px, 0, 20px;
+  // margin: 0, auto, 0 auto;
 
   @include exlg() {
     max-width: 1100px;
   }
 
   @include lg() {
-    max-width: 1000px;
+    max-width: 100%;;
   }
 
   @include md() {
-    max-width: 891px;
+    max-width: 100%;;
   }
 
   @include sm() {
-    max-width: 678px;
+    max-width: 100%;
   }
 
   @include exsm() {
-    max-width: 475px;
+    max-width: 100%;
   }
   .content {
     flex: 1;

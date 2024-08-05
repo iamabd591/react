@@ -2,14 +2,19 @@ import "./footer.scss";
 
 const Footer = () => {
   const navlinks = [
-    { href: "/", text: "FAQs" },
     { href: "/", text: "Home" },
     { href: "/", text: "About" },
     { href: "/", text: "Contact" },
-    { href: "/", text: "Support" },
     { href: "/", text: "Sign in" },
     { href: "/", text: "Sign Up" },
+  ];
+
+  const helplinks = [
+    { href: "/", text: "FAQs" },
+    { href: "/", text: "Support" },
+    { href: "/", text: "Discrimilar" },
     { href: "/", text: "Privacy Policy" },
+    { href: "/", text: "Terms & Condition" },
   ];
   return (
     <div className="footerMain">
@@ -21,8 +26,22 @@ const Footer = () => {
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
+            ever since the 1500s.
           </p>
+          <div className="socialLinks">
+            <div>
+              <img src="/whatsapp.png" alt="soiclaMedia" />
+            </div>
+            <div>
+              <img src="/facebook.png" alt="soiclaMedia" />
+            </div>
+            <div>
+              <img src="/instagram.png" alt="soiclaMedia" />
+            </div>
+            <div>
+              <img src="/linkedin.png" alt="soiclaMedia" />
+            </div>
+          </div>
         </div>
       </div>
       <div className="footerlinks">
@@ -35,10 +54,18 @@ const Footer = () => {
               </a>
             ))}
           </div>
+          <div className="helplinks">
+            {helplinks.map((link, index) => (
+              <a key={index} href={link.href}>
+                {link.text}
+              </a>
+            ))}
+          </div>
         </nav>
       </div>
       <div className="footercontact">
         <div className="textContact">
+          <h3>Contact Info</h3>
           <ul>
             <div>
               <img src="/email.png" alt="email" />
@@ -47,12 +74,12 @@ const Footer = () => {
 
             <div>
               <img src="/back-in-time.png" alt="time" />
-              <p>Mon - Fri 10 to 6</p>
+              <p>Mon - Fri 10 A.M to 6 P.M</p>
             </div>
 
             <div>
               <img src="/gps.png" alt="location" />
-              <p>Sydney, NSW AUstralia</p>
+              <p>Sydney, NSW Australia</p>
             </div>
           </ul>
         </div>
