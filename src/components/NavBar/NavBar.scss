@@ -61,6 +61,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    padding: 10px;
 
     @include lg {
       background-color: transparent;

@@ -52,8 +52,14 @@
     padding: 40px 50px;
     align-content: center;
 
+    @include lg() {
+      width: 100%;
+      padding: 0px;
+    }
+
     .footerImage {
       width: 100%;
+      padding: 20px;
 
       img {
         width: 150px;
@@ -63,6 +69,10 @@
     .footertext {
       width: 100%;
 
+      @include lg() {
+        width: 60%;
+        margin-left: 20px;
+      }
       @include md() {
         width: 50%;
       }
@@ -119,9 +129,9 @@
     }
 
     @include sm() {
-      padding: 10px;
       width: 100%;
       height: 100%;
+      padding: 10px;
     }
   }
   .footerlinks {
@@ -130,22 +140,29 @@
     padding-top: 40px;
 
     @include lg() {
-      margin-top: 60px;
+      width: 100%;
+      height: 100%;
     }
 
     @include md() {
       width: 100%;
-      padding: 5px;
+      padding-top: 0px;
     }
     @include exsm() {
       width: 100%;
+      margin-top: 10px;
     }
 
     h3 {
       margin-left: 120px;
 
+      @include lg() {
+        margin-left: 25px;
+      }
+
       @include md() {
-        margin-left: 50px;
+        margin-left: 15px;
+        margin-top: 50px;
       }
       @include exsm() {
         margin-left: 20px;
@@ -154,23 +171,30 @@
 
     nav {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 80px;
       padding: 50px;
+      margin-top: 80px;
+      align-items: center;
+      justify-content: space-between;
 
+      @include lg() {
+        display: inline-block;
+        margin-top: -35px;
+        margin-left: -25px;
+      }
       @include md() {
-        margin-top: 0px;
+        margin: 0px;
         display: inline;
       }
       @include exsm() {
         padding: 20px;
+        margin-top: 20px;
       }
       a {
-        display: flex;
+        width: 100%;
         height: 20px;
-        margin-top: 20px;
+        display: flex;
         font-weight: 800;
+        margin-top: 20px;
         transition: all 0.5s ease;
 
         &:hover {
@@ -179,16 +203,28 @@
 
         @include lg() {
           display: inline-block;
-          margin-left: 40px;
+          width: 200px;
+          margin-top: 10px;
+          margin-left: 0px;
         }
 
         @include md() {
-          display: inline-block;
           width: 120px;
+          display: inline-block;
+          margin-top: 10px;
+          margin-left: 15px;
+          height: 40px;
+          font-size: 12px;
         }
         @include exsm() {
-          margin-top: 10px;
-          display: block;
+          height: 14px;
+          width: 100%;
+          display: flex;
+          margin-left: 20px;
+          font-weight: 400;
+          font-size: 18px;
+          align-items: center;
+          justify-content: space-between;
         }
       }
     }
@@ -199,6 +235,11 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+
+  @include lg() {
+    width: 100%;
+    height: 100%;
+  }
 
   @include sm() {
     width: 100%;
@@ -219,6 +260,19 @@
       margin-left: 8px;
     }
 
+    h3 {
+      @include lg() {
+        margin-left: 24px;
+      }
+
+      @include md() {
+        margin-left: 15px;
+      }
+      @include exsm() {
+        margin-left: 20px;
+      }
+    }
+
     ul {
       margin-top: 25px;
     }
@@ -230,21 +284,37 @@
       align-items: center;
       margin-top: 30px;
 
+      @include lg() {
+        margin-left: 15px;
+      }
+
       @include md() {
-        padding: 0px;
+        margin-left: 15px;
       }
       @include exsm() {
         padding: 5px;
-        margin-top: 0px;
+        margin-left: 14px;
       }
     }
 
     img {
       width: 8%;
       height: 8%;
+
+      @include lg() {
+        width: 4%;
+        height: 4%;
+      }
+
+      @include md() {
+        width: 3%;
+        height: 3%;
+      }
+
+      @include md() {
+        width: 5%;
+        height: 5%;
+      }
     }
-    // @include exsm() {
-    //   margin-left: 0px;
-    // }
   }
 }
