@@ -8,14 +8,14 @@ const NavBar = () => {
 
   const navLinks = [
     { href: "/", text: "Home" },
-    { href: "/", text: "About" },
-    { href: "/", text: "Contact" },
-    { href: "/", text: "Agents" },
+    { href: "/about", text: "About" },
+    { href: "/contact", text: "Contact" },
+    { href: "/agent", text: "Agents" },
   ];
 
   const authLinks = [
-    { href: "/", text: "Sign in", className: "signin" },
-    { href: "/", text: "Sign up", className: "register" },
+    { href: "/signin", text: "Sign in", className: "signin" },
+    { href: "/signup", text: "Sign up", className: "register" },
   ];
 
   return (

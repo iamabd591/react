@@ -3,18 +3,18 @@ import "./footer.scss";
 const Footer = () => {
   const navlinks = [
     { href: "/", text: "Home" },
-    { href: "/", text: "About" },
-    { href: "/", text: "Contact" },
-    { href: "/", text: "Sign in" },
-    { href: "/", text: "Sign Up" },
+    { href: "/about", text: "About" },
+    { href: "/contact", text: "Contact" },
+    { href: "/signin", text: "Sign in" },
+    { href: "/signup", text: "Sign Up" },
   ];
 
   const helplinks = [
-    { href: "/", text: "FAQs" },
-    { href: "/", text: "Support" },
-    { href: "/", text: "Discrimilar" },
-    { href: "/", text: "Privacy Policy" },
-    { href: "/", text: "Terms & Condition" },
+    { href: "/faqs", text: "FAQs" },
+    { href: "/support", text: "Support" },
+    { href: "/discrimilar", text: "Discrimilar" },
+    { href: "/privacy_policy", text: "Privacy Policy" },
+    { href: "/term_&_condition", text: "Terms & Condition" },
   ];
   return (
     <div className="footerMain">
